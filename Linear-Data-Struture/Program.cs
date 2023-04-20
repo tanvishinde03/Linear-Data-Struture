@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,12 +12,17 @@ namespace Linear_Data_Struture
         static void Main(string[] args)
         {
             LinkedList linkedlist = new LinkedList();
+            Queue queue = new Queue();
             bool flag = true;
             while (flag)
             {
                 Console.WriteLine("\n Plase enter the option");
                 Console.WriteLine("Select Option 1");
                 Console.WriteLine("Select Option 2");
+                Console.WriteLine("Select Option 3");
+                Console.WriteLine("Select Option 4");
+                Console.WriteLine("Select Option 5");
+                
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -24,12 +30,26 @@ namespace Linear_Data_Struture
                         linkedlist.Add(56);
                         linkedlist.Add(30);
                         linkedlist.Add(70);
+                        linkedlist.Display();
                         break;
 
                     case 2:
                         linkedlist.AddReverse(70);
                         linkedlist.AddReverse(30);
                         linkedlist.AddReverse(56);
+                        break;
+                    
+                    case 3:
+                        queue.Enqueue(10);
+                        queue.Enqueue(20);
+                        queue.Enqueue(30);
+                        queue.Display();
+                        break;
+                    case 4:
+                        queue.Dequeue();
+                        break;
+                    case 5:
+                        queue.Display();
                         break;
                 }
             }
