@@ -13,6 +13,7 @@ namespace Linear_Data_Struture
         {
             LinkedList linkedlist = new LinkedList();
             Queue queue = new Queue();
+            Stack stack = new Stack();
             bool flag = true;
             while (flag)
             {
@@ -22,7 +23,8 @@ namespace Linear_Data_Struture
                 Console.WriteLine("Select Option 3");
                 Console.WriteLine("Select Option 4");
                 Console.WriteLine("Select Option 5");
-                
+                Console.WriteLine("Select Option 6");
+                Console.WriteLine("Select Option 7");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -50,6 +52,20 @@ namespace Linear_Data_Struture
                         break;
                     case 5:
                         queue.Display();
+                        break;
+                    case 6:
+                        stack.Push(10);
+                        stack.Push(20);
+                        stack.Push(30);
+                        stack.Display();
+                        break;
+                    case 7:
+                        stack.Push(10);
+                        stack.Push(20);
+                        stack.Push(30);
+                        stack.Display();
+                        stack.Pop(30);
+                        stack.Display();
                         break;
                 }
             }
